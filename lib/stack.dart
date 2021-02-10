@@ -34,4 +34,11 @@ class NavigationStack<T> with ChangeNotifier {
       return null;
     }
   }
+
+  /// A convenience method to map [items] with indexes.
+  /// It's just like calling [items.map], just with indexes
+  Iterable<O> mapItems<O>(O Function(T item, int index) f) {
+    var i = 0;
+    return items.map((e) => f(e, i++));
+  }
 }
