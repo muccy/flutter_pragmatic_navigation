@@ -25,7 +25,7 @@ class NavigationStack<T> with ChangeNotifier {
 
   /// Removes last item is possible and notifies change.
   /// It returns the popped item, or null if stack was empty.
-  T pop() {
+  T /*?*/ pop() {
     try {
       final poppedItem = _items.removeLast();
       notifyListeners();

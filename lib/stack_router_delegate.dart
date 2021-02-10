@@ -5,7 +5,7 @@ import 'stack.dart';
 /// Basically, you only need to override the [pages] method and to use a [RouterInformationParser] that outputs and
 /// takes [NavigationStack<T>] instances.
 abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<NavigationStack<T>>
-    with ChangeNotifier, PopNavigatorRouterDelegateMixin {
+    with ChangeNotifier, PopNavigatorRouterDelegateMixin<NavigationStack<T>> {
   /// The managed navigation stack
   final NavigationStack<T> stack;
 
