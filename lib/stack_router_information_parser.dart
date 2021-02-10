@@ -25,14 +25,17 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
   Uri uriForConfiguration(NavigationStack<T> configuration) {
     final segments = configuration.items.fold<List<String>>([""], (previousValue, item) {
       final segments = pathSegmentsForItem(item);
-      return [...previousValue, ...(segments ?? [])];
+      return [
+        ...previousValue,
+        ...(segments ?? [""])
+      ];
     });
     return Uri(pathSegments: segments);
   }
 
-  /// Returns path segments for given navigation [item].
-  /// For example, if you want to convert a `foo` item with id=1 to `foo/1`, you need to return `["foo", "1"]`.
-  List<String> pathSegmentsForItem(T item);
+  /// Returns path segments for given navigation [item]. If you return null, it means you want to add an empty segment.
+  /// For example, if you want to convert a `foo` item with `id=1` to `foo/1`, you need to return `["foo", "1"]`.
+  List<String> /*?*/ pathSegmentsForItem(T item);
 
   /// Returns navigation items for incoming [routeInformation].
   /// Default implementation takes the URI and explores its segments. It begins taking the first [pathSegmentsChunkStartSize]

@@ -18,7 +18,7 @@ class MainRouterDelegate extends NavigationStackRouterDelegate<NavigationStackIt
   @override
   List<Page> pages({BuildContext context}) => stack
       .mapItems((item, index) => item.when(
-            notFound: () => MaterialPage(child: NotFound()),
+            notFound: (pathSegments) => MaterialPage(child: NotFound()),
             appSection: (id) => MaterialPage(
               key: ValueKey("AppSectionsPage"),
               child: AppSections(selectedSectionId: id),

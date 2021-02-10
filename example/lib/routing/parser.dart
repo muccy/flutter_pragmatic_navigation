@@ -13,34 +13,37 @@ class MainRouterInformationParser extends NavigationStackRouterInformationParser
 
   @override
   Future<NavigationStackItem> itemForPathSegments(List<String> pathSegments) async {
-    final key = pathSegments[0];
-    final value = pathSegments[1];
+    try {
+      final key = pathSegments[0];
+      final value = pathSegments[1];
 
-    NavigationStackItem item;
-    switch (key) {
-      case _Keys.appSection:
-        if (AppSection.validIds.contains(value)) {
-          item = NavigationStackItem.appSection(id: value);
-        }
-        break;
-      case _Keys.ingredient:
-        if (isValidIngredientId(value)) {
-          item = NavigationStackItem.ingredient(id: value);
-        }
-        break;
-      case _Keys.recipe:
-        if (isValidRecipeId(value)) {
-          item = NavigationStackItem.recipe(id: value);
-        }
-        break;
+      NavigationStackItem item;
+      switch (key) {
+        case _Keys.appSection:
+          if (AppSection.validIds.contains(value)) {
+            item = NavigationStackItem.appSection(id: value);
+          }
+          break;
+        case _Keys.ingredient:
+          if (isValidIngredientId(value)) {
+            item = NavigationStackItem.ingredient(id: value);
+          }
+          break;
+        case _Keys.recipe:
+          if (isValidRecipeId(value)) {
+            item = NavigationStackItem.recipe(id: value);
+          }
+          break;
+      }
+      return item ?? NavigationStackItem.notFound(pathSegments: pathSegments);
+    } catch (e) {
+      return null;
     }
-
-    return item ?? NavigationStackItem.notFound();
   }
 
   @override
   List<String> pathSegmentsForItem(NavigationStackItem item) => item.when(
-        notFound: () => [],
+        notFound: (pathSegments) => pathSegments,
         appSection: (id) => [_Keys.appSection, id],
         ingredient: (id) => [_Keys.ingredient, id],
         recipe: (id) => [_Keys.recipe, id],
