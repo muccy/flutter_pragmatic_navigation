@@ -1,8 +1,8 @@
 name: pragmatic_navigation
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+author: Marco Muccinelli
+homepage: https://github.com/muccy/flutter_pragmatic_navigation
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
