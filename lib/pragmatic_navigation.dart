@@ -1,4 +1,4 @@
-library flutter_pragmatic_navigation;
+library pragmatic_navigation;
 
 /// A Calculator.
 class Calculator {

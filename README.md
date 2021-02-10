@@ -1,4 +1,4 @@
-# flutter_pragmatic_navigation
+# pragmatic_navigation
 
 A new Flutter package project.
 
