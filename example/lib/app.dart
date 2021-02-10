@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pragmatic_navigation/pragmatic_navigation.dart';
 
 import 'package:example/app_sections/model.dart';
 import 'package:example/ingredients/provider.dart';
@@ -8,7 +9,7 @@ import 'package:example/recipes/provider.dart';
 import 'package:example/recipes/utils.dart';
 import 'package:example/routing/delegate.dart';
 import 'package:example/routing/parser.dart';
-import 'package:example/routing/stack.dart';
+import 'package:example/routing/stack_item.dart';
 
 class App extends StatelessWidget {
   const App({Key key}) : super(key: key);

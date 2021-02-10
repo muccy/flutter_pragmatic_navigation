@@ -4,7 +4,7 @@ import 'package:example/ingredients/model.dart';
 import 'package:example/recipes/provider.dart';
 import 'package:example/recipes/utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:example/routing/stack.dart';
+import 'package:example/routing/stack_item.dart';
 
 class IngredientDetail extends ConsumerWidget {
   final Ingredient ingredient;

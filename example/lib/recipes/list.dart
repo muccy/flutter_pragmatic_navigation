@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:example/app.dart';
 import 'package:example/recipes/provider.dart';
-import 'package:example/routing/stack.dart';
+import 'package:example/routing/stack_item.dart';
 
 class Recipes extends ConsumerWidget {
   const Recipes({Key key}) : super(key: key);

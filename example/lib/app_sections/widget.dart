@@ -4,7 +4,7 @@ import 'package:example/app.dart';
 import 'package:example/app_sections/model.dart';
 import 'package:example/ingredients/list.dart';
 import 'package:example/recipes/list.dart';
-import 'package:example/routing/stack.dart';
+import 'package:example/routing/stack_item.dart';
 
 class AppSections extends StatelessWidget {
   final appSections = [AppSection.ingredients(), AppSection.recipes()];

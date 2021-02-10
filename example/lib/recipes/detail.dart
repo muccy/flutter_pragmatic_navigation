@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:example/app.dart';
 import 'package:example/ingredients/provider.dart';
 import 'package:example/recipes/model.dart';
-import 'package:example/routing/stack.dart';
+import 'package:example/routing/stack_item.dart';
 
 class RecipeDetail extends ConsumerWidget {
   final Recipe recipe;

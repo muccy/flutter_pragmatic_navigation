@@ -25,6 +25,8 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^0.12.4
   freezed_annotation:
+  pragmatic_navigation:
+    path: ..
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
