@@ -1,19 +1,18 @@
+import 'package:example/recipes/repo.dart';
+import 'package:example/routing/stack.dart';
 import 'package:flutter/material.dart';
-import 'package:example/app.dart';
 import 'package:example/ingredients/model.dart';
-import 'package:example/recipes/provider.dart';
 import 'package:example/recipes/utils.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:example/routing/stack_item.dart';
 
-class IngredientDetail extends ConsumerWidget {
+class IngredientDetail extends StatelessWidget {
   final Ingredient ingredient;
 
   const IngredientDetail({Key key, @required this.ingredient}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final relatedRecipes = watch(recipesProvider).recipesWithIngredientId(ingredient.id);
+  Widget build(BuildContext context) {
+    final relatedRecipes = allRecipes.withIngredientId(ingredient.id);
 
     return Scaffold(
       appBar: AppBar(title: Text(ingredient.name)),
@@ -38,7 +37,7 @@ class IngredientDetail extends ConsumerWidget {
                       Icons.chevron_right,
                     ),
                     onTap: () {
-                      context.read(navigationStackProvider).push(NavigationStackItem.recipe(id: recipe.id));
+                      AppNavigationStack.instance.push(NavigationStackItem.recipe(id: recipe.id));
                     },
                   );
                 },

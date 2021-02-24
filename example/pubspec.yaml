@@ -23,7 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_riverpod: ^0.12.4
   freezed_annotation:
   pragmatic_navigation:
     path: ..

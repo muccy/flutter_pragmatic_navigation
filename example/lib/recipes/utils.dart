@@ -5,5 +5,5 @@ extension RecipeSearch on List<Recipe> {
   @nullable
   Recipe recipeWithId(String id) => firstWhere((element) => element.id == id, orElse: () => null);
 
-  List<Recipe> recipesWithIngredientId(String id) => where((element) => element.ingredientIds.contains(id)).toList();
+  List<Recipe> withIngredientId(String id) => where((element) => element.ingredientIds.contains(id)).toList();
 }

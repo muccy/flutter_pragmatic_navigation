@@ -1,6 +1,5 @@
+import 'package:example/routing/stack.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:example/app.dart';
 import 'package:example/app_sections/model.dart';
 import 'package:example/ingredients/list.dart';
 import 'package:example/recipes/list.dart';
@@ -35,7 +34,7 @@ class AppSections extends StatelessWidget {
         currentIndex: selectedSectionIndex,
         onTap: (value) {
           final appSection = appSections[value];
-          context.read(navigationStackProvider).items = [NavigationStackItem.appSection(id: appSection.id)];
+          AppNavigationStack.instance.items = [NavigationStackItem.appSection(id: appSection.id)];
         },
       ),
     );
