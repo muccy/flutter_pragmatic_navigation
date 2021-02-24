@@ -1,10 +1,21 @@
-// @dart=2.11
+// @dart=2.10
 
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:pragmatic_navigation/stack.dart';
 
+/// Base class to build a URL parser from and to the [NavigationStack].
+/// The only unimplemented methods are:
+/// * [pathSegmentsForItem], that is called in order to build URL components from given stack item;
+/// * [itemForPathSegments], that is called in order to get a stack item from a bunch of URL segments.
+///
+/// This parser takes an increasingly large chunk of URL segments to convert (starting from [pathSegmentsChunkStartSize]
+/// and going up until [pathSegmentsChunkMaxSize]). It passes every chunk to [itemForPathSegments]. If [itemForPathSegments]
+/// is able to get a stack item, it goes on. Otherwise the URL construction is aborted. You could alse override
+/// [itemsForRouteInformation] to able to implement further checks on the built URL.
+/// On the other way around, the parser takes each stack items and invokes [pathSegmentsForItem]. The segments are then
+/// joined together to create the final URL.
 abstract class NavigationStackRouterInformationParser<T> extends RouteInformationParser<NavigationStack<T>> {
   /// When [parseRouteInformation] examines the incoming URI, it takes an increasingly large chunk of segments to
   /// inspect. This number is the base size.

@@ -1,4 +1,4 @@
-// @dart=2.11
+// @dart=2.10
 
 import 'dart:collection';
 
@@ -19,7 +19,7 @@ class NavigationStack<T> with ChangeNotifier {
     notifyListeners();
   }
 
-  /// Push a new [item] at the end of the stack and notifies change
+  /// Pushes a new [item] at the end of the stack and notifies change
   void push(T item) {
     _items.add(item);
     notifyListeners();
@@ -38,7 +38,7 @@ class NavigationStack<T> with ChangeNotifier {
   }
 
   /// A convenience method to map [items] with indexes.
-  /// It's just like calling [items.map], just with indexes
+  /// It's just like calling [items.map], but with indexes
   Iterable<O> mapItems<O>(O Function(T item, int index) f) {
     var i = 0;
     return items.map((e) => f(e, i++));

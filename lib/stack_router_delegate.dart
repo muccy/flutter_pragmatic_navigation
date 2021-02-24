@@ -1,11 +1,11 @@
-// @dart=2.11
+// @dart=2.10
 
 import 'package:flutter/widgets.dart';
 import 'stack.dart';
 
 /// A convenience abstract [RouterDelegate] set to observe a given [NavigationStack] instance.
 /// Basically, you only need to override the [pages] method and to use a [RouterInformationParser] that outputs and
-/// takes [NavigationStack<T>] instances.
+/// takes [NavigationStack<T>] instances (e.g.: [NavigationStackRouterInformationParser]).
 abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<NavigationStack<T>>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<NavigationStack<T>> {
   /// The managed navigation stack
