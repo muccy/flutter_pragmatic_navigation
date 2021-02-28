@@ -1,11 +1,10 @@
 name: pragmatic_navigation
 description: A toolkit that provides the extra abstraction layer missing from Navigation 2.0.
-version: 0.0.1
-author: Marco Muccinelli
+version: 0.0.2
 homepage: https://github.com/muccy/flutter_pragmatic_navigation
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.10.0 <3.0.0"
   flutter: ">=1.22.0"
 
 dependencies:
