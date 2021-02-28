@@ -6,7 +6,7 @@ At this time it only exposes convenience classes to work with _stack navigation_
 
 ## Stack Navigation
 
-Useful when the entire navigation could be thought as a series of screens one after another.
+Useful when the entire navigation could be thought as a series of screens one after another. You can read more about this concept [here](https://muccy.medium.com/flutter-an-easy-and-pragmatic-approach-to-navigator-2-0-44152e73112f).
 
 ### Stack
 
