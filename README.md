@@ -8,7 +8,7 @@ At this time it only exposes convenience classes to work with _stack navigation_
 
 Useful when the entire navigation could be thought as a series of screens one after another.
 
-### Stack
+### Stack
 
 This package exposes a `NavigationStack` class that can hold a collection of generic items. It will be your _single source of truth_, so it will be need to maintain a single universally accessible instance of it.
 
