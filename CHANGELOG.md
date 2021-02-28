@@ -1,3 +1,7 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 2021/02/28
 
-* TODO: Describe initial release.
+First release including stack navigation classes:
+
+* `NavigationStackRouterDelegate`
+* `NavigationStack`
+* `NavigationStackRouterInformationParser`
