@@ -1,6 +1,5 @@
 import 'package:example/app_sections/model.dart';
 import 'package:example/routing/stack_item.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pragmatic_navigation/pragmatic_navigation.dart';
 

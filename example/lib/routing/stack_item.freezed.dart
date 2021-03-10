@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'stack_item.dart';
 
@@ -9,32 +9,31 @@ part of 'stack_item.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$NavigationStackItemTearOff {
   const _$NavigationStackItemTearOff();
 
-// ignore: unused_element
   NavigationStackItemNotFound notFound({required List<String> pathSegments}) {
     return NavigationStackItemNotFound(
       pathSegments: pathSegments,
     );
   }
 
-// ignore: unused_element
   NavigationStackItemAppSection appSection({required String id}) {
     return NavigationStackItemAppSection(
       id: id,
     );
   }
 
-// ignore: unused_element
   NavigationStackItemIngredient ingredient({required String id}) {
     return NavigationStackItemIngredient(
       id: id,
     );
   }
 
-// ignore: unused_element
   NavigationStackItemRecipe recipe({required String id}) {
     return NavigationStackItemRecipe(
       id: id,
@@ -43,41 +42,44 @@ class _$NavigationStackItemTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $NavigationStackItem = _$NavigationStackItemTearOff();
 
 /// @nodoc
 mixin _$NavigationStackItem {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult notFound(List<String> pathSegments),
-    required TResult appSection(String id),
-    required TResult ingredient(String id),
-    required TResult recipe(String id),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<String> pathSegments) notFound,
+    required TResult Function(String id) appSection,
+    required TResult Function(String id) ingredient,
+    required TResult Function(String id) recipe,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult notFound(List<String> pathSegments)?,
-    TResult appSection(String id)?,
-    TResult ingredient(String id)?,
-    TResult recipe(String id)?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<String> pathSegments)? notFound,
+    TResult Function(String id)? appSection,
+    TResult Function(String id)? ingredient,
+    TResult Function(String id)? recipe,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult notFound(NavigationStackItemNotFound value),
-    required TResult appSection(NavigationStackItemAppSection value),
-    required TResult ingredient(NavigationStackItemIngredient value),
-    required TResult recipe(NavigationStackItemRecipe value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationStackItemNotFound value) notFound,
+    required TResult Function(NavigationStackItemAppSection value) appSection,
+    required TResult Function(NavigationStackItemIngredient value) ingredient,
+    required TResult Function(NavigationStackItemRecipe value) recipe,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult notFound(NavigationStackItemNotFound value)?,
-    TResult appSection(NavigationStackItemAppSection value)?,
-    TResult ingredient(NavigationStackItemIngredient value)?,
-    TResult recipe(NavigationStackItemRecipe value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationStackItemNotFound value)? notFound,
+    TResult Function(NavigationStackItemAppSection value)? appSection,
+    TResult Function(NavigationStackItemIngredient value)? ingredient,
+    TResult Function(NavigationStackItemRecipe value)? recipe,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -103,7 +105,7 @@ abstract class $NavigationStackItemNotFoundCopyWith<$Res> {
           NavigationStackItemNotFound value,
           $Res Function(NavigationStackItemNotFound) then) =
       _$NavigationStackItemNotFoundCopyWithImpl<$Res>;
-  $Res call({List<String>? pathSegments});
+  $Res call({List<String> pathSegments});
 }
 
 /// @nodoc
@@ -125,15 +127,15 @@ class _$NavigationStackItemNotFoundCopyWithImpl<$Res>
     return _then(NavigationStackItemNotFound(
       pathSegments: pathSegments == freezed
           ? _value.pathSegments
-          : (pathSegments as List<String>?)!,
+          : pathSegments // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
 
 /// @nodoc
 class _$NavigationStackItemNotFound implements NavigationStackItemNotFound {
-  const _$NavigationStackItemNotFound({required this.pathSegments})
-      : assert(pathSegments != null);
+  const _$NavigationStackItemNotFound({required this.pathSegments});
 
   @override
   final List<String> pathSegments;
@@ -164,29 +166,24 @@ class _$NavigationStackItemNotFound implements NavigationStackItemNotFound {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult notFound(List<String> pathSegments),
-    required TResult appSection(String id),
-    required TResult ingredient(String id),
-    required TResult recipe(String id),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<String> pathSegments) notFound,
+    required TResult Function(String id) appSection,
+    required TResult Function(String id) ingredient,
+    required TResult Function(String id) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return notFound(pathSegments);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult notFound(List<String> pathSegments)?,
-    TResult appSection(String id)?,
-    TResult ingredient(String id)?,
-    TResult recipe(String id)?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<String> pathSegments)? notFound,
+    TResult Function(String id)? appSection,
+    TResult Function(String id)? ingredient,
+    TResult Function(String id)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notFound != null) {
       return notFound(pathSegments);
     }
@@ -195,29 +192,24 @@ class _$NavigationStackItemNotFound implements NavigationStackItemNotFound {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult notFound(NavigationStackItemNotFound value),
-    required TResult appSection(NavigationStackItemAppSection value),
-    required TResult ingredient(NavigationStackItemIngredient value),
-    required TResult recipe(NavigationStackItemRecipe value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationStackItemNotFound value) notFound,
+    required TResult Function(NavigationStackItemAppSection value) appSection,
+    required TResult Function(NavigationStackItemIngredient value) ingredient,
+    required TResult Function(NavigationStackItemRecipe value) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return notFound(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult notFound(NavigationStackItemNotFound value)?,
-    TResult appSection(NavigationStackItemAppSection value)?,
-    TResult ingredient(NavigationStackItemIngredient value)?,
-    TResult recipe(NavigationStackItemRecipe value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationStackItemNotFound value)? notFound,
+    TResult Function(NavigationStackItemAppSection value)? appSection,
+    TResult Function(NavigationStackItemIngredient value)? ingredient,
+    TResult Function(NavigationStackItemRecipe value)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notFound != null) {
       return notFound(this);
     }
@@ -229,10 +221,10 @@ abstract class NavigationStackItemNotFound implements NavigationStackItem {
   const factory NavigationStackItemNotFound(
       {required List<String> pathSegments}) = _$NavigationStackItemNotFound;
 
-  List<String> get pathSegments;
+  List<String> get pathSegments => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NavigationStackItemNotFoundCopyWith<NavigationStackItemNotFound>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -241,7 +233,7 @@ abstract class $NavigationStackItemAppSectionCopyWith<$Res> {
           NavigationStackItemAppSection value,
           $Res Function(NavigationStackItemAppSection) then) =
       _$NavigationStackItemAppSectionCopyWithImpl<$Res>;
-  $Res call({String? id});
+  $Res call({String id});
 }
 
 /// @nodoc
@@ -262,15 +254,17 @@ class _$NavigationStackItemAppSectionCopyWithImpl<$Res>
     Object? id = freezed,
   }) {
     return _then(NavigationStackItemAppSection(
-      id: id == freezed ? _value.id : (id as String?)!,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$NavigationStackItemAppSection implements NavigationStackItemAppSection {
-  const _$NavigationStackItemAppSection({required this.id})
-      : assert(id != null);
+  const _$NavigationStackItemAppSection({required this.id});
 
   @override
   final String id;
@@ -300,29 +294,24 @@ class _$NavigationStackItemAppSection implements NavigationStackItemAppSection {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult notFound(List<String> pathSegments),
-    required TResult appSection(String id),
-    required TResult ingredient(String id),
-    required TResult recipe(String id),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<String> pathSegments) notFound,
+    required TResult Function(String id) appSection,
+    required TResult Function(String id) ingredient,
+    required TResult Function(String id) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return appSection(id);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult notFound(List<String> pathSegments)?,
-    TResult appSection(String id)?,
-    TResult ingredient(String id)?,
-    TResult recipe(String id)?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<String> pathSegments)? notFound,
+    TResult Function(String id)? appSection,
+    TResult Function(String id)? ingredient,
+    TResult Function(String id)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (appSection != null) {
       return appSection(id);
     }
@@ -331,29 +320,24 @@ class _$NavigationStackItemAppSection implements NavigationStackItemAppSection {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult notFound(NavigationStackItemNotFound value),
-    required TResult appSection(NavigationStackItemAppSection value),
-    required TResult ingredient(NavigationStackItemIngredient value),
-    required TResult recipe(NavigationStackItemRecipe value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationStackItemNotFound value) notFound,
+    required TResult Function(NavigationStackItemAppSection value) appSection,
+    required TResult Function(NavigationStackItemIngredient value) ingredient,
+    required TResult Function(NavigationStackItemRecipe value) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return appSection(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult notFound(NavigationStackItemNotFound value)?,
-    TResult appSection(NavigationStackItemAppSection value)?,
-    TResult ingredient(NavigationStackItemIngredient value)?,
-    TResult recipe(NavigationStackItemRecipe value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationStackItemNotFound value)? notFound,
+    TResult Function(NavigationStackItemAppSection value)? appSection,
+    TResult Function(NavigationStackItemIngredient value)? ingredient,
+    TResult Function(NavigationStackItemRecipe value)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (appSection != null) {
       return appSection(this);
     }
@@ -365,10 +349,10 @@ abstract class NavigationStackItemAppSection implements NavigationStackItem {
   const factory NavigationStackItemAppSection({required String id}) =
       _$NavigationStackItemAppSection;
 
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NavigationStackItemAppSectionCopyWith<NavigationStackItemAppSection>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -377,7 +361,7 @@ abstract class $NavigationStackItemIngredientCopyWith<$Res> {
           NavigationStackItemIngredient value,
           $Res Function(NavigationStackItemIngredient) then) =
       _$NavigationStackItemIngredientCopyWithImpl<$Res>;
-  $Res call({String? id});
+  $Res call({String id});
 }
 
 /// @nodoc
@@ -398,15 +382,17 @@ class _$NavigationStackItemIngredientCopyWithImpl<$Res>
     Object? id = freezed,
   }) {
     return _then(NavigationStackItemIngredient(
-      id: id == freezed ? _value.id : (id as String?)!,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$NavigationStackItemIngredient implements NavigationStackItemIngredient {
-  const _$NavigationStackItemIngredient({required this.id})
-      : assert(id != null);
+  const _$NavigationStackItemIngredient({required this.id});
 
   @override
   final String id;
@@ -436,29 +422,24 @@ class _$NavigationStackItemIngredient implements NavigationStackItemIngredient {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult notFound(List<String> pathSegments),
-    required TResult appSection(String id),
-    required TResult ingredient(String id),
-    required TResult recipe(String id),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<String> pathSegments) notFound,
+    required TResult Function(String id) appSection,
+    required TResult Function(String id) ingredient,
+    required TResult Function(String id) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return ingredient(id);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult notFound(List<String> pathSegments)?,
-    TResult appSection(String id)?,
-    TResult ingredient(String id)?,
-    TResult recipe(String id)?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<String> pathSegments)? notFound,
+    TResult Function(String id)? appSection,
+    TResult Function(String id)? ingredient,
+    TResult Function(String id)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (ingredient != null) {
       return ingredient(id);
     }
@@ -467,29 +448,24 @@ class _$NavigationStackItemIngredient implements NavigationStackItemIngredient {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult notFound(NavigationStackItemNotFound value),
-    required TResult appSection(NavigationStackItemAppSection value),
-    required TResult ingredient(NavigationStackItemIngredient value),
-    required TResult recipe(NavigationStackItemRecipe value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationStackItemNotFound value) notFound,
+    required TResult Function(NavigationStackItemAppSection value) appSection,
+    required TResult Function(NavigationStackItemIngredient value) ingredient,
+    required TResult Function(NavigationStackItemRecipe value) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return ingredient(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult notFound(NavigationStackItemNotFound value)?,
-    TResult appSection(NavigationStackItemAppSection value)?,
-    TResult ingredient(NavigationStackItemIngredient value)?,
-    TResult recipe(NavigationStackItemRecipe value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationStackItemNotFound value)? notFound,
+    TResult Function(NavigationStackItemAppSection value)? appSection,
+    TResult Function(NavigationStackItemIngredient value)? ingredient,
+    TResult Function(NavigationStackItemRecipe value)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (ingredient != null) {
       return ingredient(this);
     }
@@ -501,10 +477,10 @@ abstract class NavigationStackItemIngredient implements NavigationStackItem {
   const factory NavigationStackItemIngredient({required String id}) =
       _$NavigationStackItemIngredient;
 
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $NavigationStackItemIngredientCopyWith<NavigationStackItemIngredient>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -512,7 +488,7 @@ abstract class $NavigationStackItemRecipeCopyWith<$Res> {
   factory $NavigationStackItemRecipeCopyWith(NavigationStackItemRecipe value,
           $Res Function(NavigationStackItemRecipe) then) =
       _$NavigationStackItemRecipeCopyWithImpl<$Res>;
-  $Res call({String? id});
+  $Res call({String id});
 }
 
 /// @nodoc
@@ -532,14 +508,17 @@ class _$NavigationStackItemRecipeCopyWithImpl<$Res>
     Object? id = freezed,
   }) {
     return _then(NavigationStackItemRecipe(
-      id: id == freezed ? _value.id : (id as String?)!,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 class _$NavigationStackItemRecipe implements NavigationStackItemRecipe {
-  const _$NavigationStackItemRecipe({required this.id}) : assert(id != null);
+  const _$NavigationStackItemRecipe({required this.id});
 
   @override
   final String id;
@@ -569,29 +548,24 @@ class _$NavigationStackItemRecipe implements NavigationStackItemRecipe {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult notFound(List<String> pathSegments),
-    required TResult appSection(String id),
-    required TResult ingredient(String id),
-    required TResult recipe(String id),
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<String> pathSegments) notFound,
+    required TResult Function(String id) appSection,
+    required TResult Function(String id) ingredient,
+    required TResult Function(String id) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return recipe(id);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult notFound(List<String> pathSegments)?,
-    TResult appSection(String id)?,
-    TResult ingredient(String id)?,
-    TResult recipe(String id)?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<String> pathSegments)? notFound,
+    TResult Function(String id)? appSection,
+    TResult Function(String id)? ingredient,
+    TResult Function(String id)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (recipe != null) {
       return recipe(id);
     }
@@ -600,29 +574,24 @@ class _$NavigationStackItemRecipe implements NavigationStackItemRecipe {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult notFound(NavigationStackItemNotFound value),
-    required TResult appSection(NavigationStackItemAppSection value),
-    required TResult ingredient(NavigationStackItemIngredient value),
-    required TResult recipe(NavigationStackItemRecipe value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(NavigationStackItemNotFound value) notFound,
+    required TResult Function(NavigationStackItemAppSection value) appSection,
+    required TResult Function(NavigationStackItemIngredient value) ingredient,
+    required TResult Function(NavigationStackItemRecipe value) recipe,
   }) {
-    assert(notFound != null);
-    assert(appSection != null);
-    assert(ingredient != null);
-    assert(recipe != null);
     return recipe(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult notFound(NavigationStackItemNotFound value)?,
-    TResult appSection(NavigationStackItemAppSection value)?,
-    TResult ingredient(NavigationStackItemIngredient value)?,
-    TResult recipe(NavigationStackItemRecipe value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(NavigationStackItemNotFound value)? notFound,
+    TResult Function(NavigationStackItemAppSection value)? appSection,
+    TResult Function(NavigationStackItemIngredient value)? ingredient,
+    TResult Function(NavigationStackItemRecipe value)? recipe,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (recipe != null) {
       return recipe(this);
     }
@@ -634,7 +603,8 @@ abstract class NavigationStackItemRecipe implements NavigationStackItem {
   const factory NavigationStackItemRecipe({required String id}) =
       _$NavigationStackItemRecipe;
 
-  String get id;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NavigationStackItemRecipeCopyWith<NavigationStackItemRecipe> get copyWith;
+  $NavigationStackItemRecipeCopyWith<NavigationStackItemRecipe> get copyWith =>
+      throw _privateConstructorUsedError;
 }

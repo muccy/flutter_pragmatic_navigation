@@ -16,8 +16,8 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       routerDelegate: MainRouterDelegate(stack: AppNavigationStack.instance),
       routeInformationParser: MainRouterInformationParser(
-        isValidIngredientId: (id) => id != null && allIngredients.ingredientWithId(id) != null,
-        isValidRecipeId: (id) => id != null && allRecipes.recipeWithId(id) != null,
+        isValidIngredientId: (id) => allIngredients.ingredientWithId(id) != null,
+        isValidRecipeId: (id) => allRecipes.recipeWithId(id) != null,
       ),
     );
   }

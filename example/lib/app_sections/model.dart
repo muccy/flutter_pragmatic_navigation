@@ -5,7 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'model.freezed.dart';
 
 @freezed
-abstract class AppSection implements _$AppSection {
+class AppSection with _$AppSection {
   const AppSection._();
   const factory AppSection.ingredients() = _Ingredients;
   const factory AppSection.recipes() = _Recipes;

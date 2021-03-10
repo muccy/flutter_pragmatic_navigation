@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'model.dart';
 
@@ -9,49 +9,53 @@ part of 'model.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$AppSectionTearOff {
   const _$AppSectionTearOff();
 
-// ignore: unused_element
   _Ingredients ingredients() {
     return const _Ingredients();
   }
 
-// ignore: unused_element
   _Recipes recipes() {
     return const _Recipes();
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AppSection = _$AppSectionTearOff();
 
 /// @nodoc
 mixin _$AppSection {
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult ingredients(),
-    required TResult recipes(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() ingredients,
+    required TResult Function() recipes,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult ingredients()?,
-    TResult recipes()?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? ingredients,
+    TResult Function()? recipes,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult ingredients(_Ingredients value),
-    required TResult recipes(_Recipes value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Ingredients value) ingredients,
+    required TResult Function(_Recipes value) recipes,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult ingredients(_Ingredients value)?,
-    TResult recipes(_Recipes value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Ingredients value)? ingredients,
+    TResult Function(_Recipes value)? recipes,
     required TResult orElse(),
-  });
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -113,23 +117,20 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult ingredients(),
-    required TResult recipes(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() ingredients,
+    required TResult Function() recipes,
   }) {
-    assert(ingredients != null);
-    assert(recipes != null);
     return ingredients();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult ingredients()?,
-    TResult recipes()?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? ingredients,
+    TResult Function()? recipes,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (ingredients != null) {
       return ingredients();
     }
@@ -138,23 +139,20 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult ingredients(_Ingredients value),
-    required TResult recipes(_Recipes value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Ingredients value) ingredients,
+    required TResult Function(_Recipes value) recipes,
   }) {
-    assert(ingredients != null);
-    assert(recipes != null);
     return ingredients(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult ingredients(_Ingredients value)?,
-    TResult recipes(_Recipes value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Ingredients value)? ingredients,
+    TResult Function(_Recipes value)? recipes,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (ingredients != null) {
       return ingredients(this);
     }
@@ -163,8 +161,8 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
 }
 
 abstract class _Ingredients extends AppSection {
-  const _Ingredients._() : super._();
   const factory _Ingredients() = _$_Ingredients;
+  const _Ingredients._() : super._();
 }
 
 /// @nodoc
@@ -208,23 +206,20 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    required TResult ingredients(),
-    required TResult recipes(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() ingredients,
+    required TResult Function() recipes,
   }) {
-    assert(ingredients != null);
-    assert(recipes != null);
     return recipes();
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult ingredients()?,
-    TResult recipes()?,
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? ingredients,
+    TResult Function()? recipes,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (recipes != null) {
       return recipes();
     }
@@ -233,23 +228,20 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    required TResult ingredients(_Ingredients value),
-    required TResult recipes(_Recipes value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Ingredients value) ingredients,
+    required TResult Function(_Recipes value) recipes,
   }) {
-    assert(ingredients != null);
-    assert(recipes != null);
     return recipes(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult ingredients(_Ingredients value)?,
-    TResult recipes(_Recipes value)?,
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Ingredients value)? ingredients,
+    TResult Function(_Recipes value)? recipes,
     required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (recipes != null) {
       return recipes(this);
     }
@@ -258,6 +250,6 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
 }
 
 abstract class _Recipes extends AppSection {
-  const _Recipes._() : super._();
   const factory _Recipes() = _$_Recipes;
+  const _Recipes._() : super._();
 }

@@ -23,17 +23,17 @@ class MainRouterDelegate extends NavigationStackRouterDelegate<NavigationStackIt
               child: AppSections(selectedSectionId: id),
             ),
             ingredient: (id) {
-              final ingredient = id == null ? null : allIngredients.ingredientWithId(id)!;
+              final ingredient = allIngredients.ingredientWithId(id);
               return MaterialPage(
                 key: ValueKey("IngredientDetail_$index"),
-                child: IngredientDetail(ingredient: ingredient),
+                child: ingredient != null ? IngredientDetail(ingredient: ingredient) : NotFound(),
               );
             },
             recipe: (id) {
-              final recipe = id == null ? null : allRecipes.recipeWithId(id)!;
+              final recipe = allRecipes.recipeWithId(id);
               return MaterialPage(
                 key: ValueKey("RecipeDetail_$index"),
-                child: RecipeDetail(recipe: recipe),
+                child: recipe != null ? RecipeDetail(recipe: recipe) : NotFound(),
               );
             },
           ))
