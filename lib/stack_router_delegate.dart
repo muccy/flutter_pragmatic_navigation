@@ -1,5 +1,3 @@
-// @dart=2.10
-
 import 'package:flutter/widgets.dart';
 import 'stack.dart';
 
@@ -12,7 +10,7 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
   final NavigationStack<T> stack;
 
   /// Converts the [stack] items to [Page] instances to be used while building the actual [Navigator]
-  List<Page> pages({@required BuildContext context});
+  List<Page> pages({required BuildContext context});
 
   @override
   void dispose() {
@@ -20,7 +18,7 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
     super.dispose();
   }
 
-  NavigationStackRouterDelegate({@required this.stack}) : super() {
+  NavigationStackRouterDelegate({required this.stack}) : super() {
     stack.addListener(notifyListeners);
   }
 

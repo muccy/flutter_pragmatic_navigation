@@ -1,5 +1,3 @@
-// @dart=2.10
-
 import 'dart:collection';
 
 import 'package:flutter/foundation.dart';
@@ -8,14 +6,14 @@ import 'package:flutter/foundation.dart';
 /// and [pop] operations.
 class NavigationStack<T> with ChangeNotifier {
   List<T> _items;
-  NavigationStack(List<T> items) : _items = List.of(items) ?? [];
+  NavigationStack(List<T> items) : _items = List.of(items);
 
   /// Returns an immutable copy of items in this stack
   UnmodifiableListView<T> get items => UnmodifiableListView(_items);
 
   /// Replaces [items] with a copy of given [newItems] and notifies changes
   set items(List<T> newItems) {
-    _items = List.from(newItems ?? []);
+    _items = List.from(newItems);
     notifyListeners();
   }
 
@@ -27,7 +25,7 @@ class NavigationStack<T> with ChangeNotifier {
 
   /// Removes last item is possible and notifies change.
   /// It returns the popped item, or null if stack was empty.
-  T /*?*/ pop() {
+  T? pop() {
     try {
       final poppedItem = _items.removeLast();
       notifyListeners();

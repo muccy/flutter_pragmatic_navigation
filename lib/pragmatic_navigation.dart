@@ -1,5 +1,3 @@
-// @dart=2.10
-
 library pragmatic_navigation;
 
 export 'stack.dart';
