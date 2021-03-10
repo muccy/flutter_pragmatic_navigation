@@ -15,9 +15,9 @@ class _$RecipeTearOff {
 
 // ignore: unused_element
   _Recipe call(
-      {@required String id,
-      @required String name,
-      @required List<String> ingredientIds}) {
+      {required String id,
+      required String name,
+      required List<String> ingredientIds}) {
     return _Recipe(
       id: id,
       name: name,
@@ -44,7 +44,7 @@ mixin _$Recipe {
 abstract class $RecipeCopyWith<$Res> {
   factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) then) =
       _$RecipeCopyWithImpl<$Res>;
-  $Res call({String id, String name, List<String> ingredientIds});
+  $Res call({String? id, String? name, List<String>? ingredientIds});
 }
 
 /// @nodoc
@@ -53,20 +53,20 @@ class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
 
   final Recipe _value;
   // ignore: unused_field
-  final $Res Function(Recipe) _then;
+  final $Res Function(Recipe?) _then;
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object ingredientIds = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? ingredientIds = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed ? _value.id : id as String?,
+      name: name == freezed ? _value.name : name as String?,
       ingredientIds: ingredientIds == freezed
           ? _value.ingredientIds
-          : ingredientIds as List<String>,
+          : ingredientIds as List<String>?,
     ));
   }
 }
@@ -76,7 +76,7 @@ abstract class _$RecipeCopyWith<$Res> implements $RecipeCopyWith<$Res> {
   factory _$RecipeCopyWith(_Recipe value, $Res Function(_Recipe) then) =
       __$RecipeCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String name, List<String> ingredientIds});
+  $Res call({String? id, String? name, List<String>? ingredientIds});
 }
 
 /// @nodoc
@@ -90,16 +90,16 @@ class __$RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object ingredientIds = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? ingredientIds = freezed,
   }) {
     return _then(_Recipe(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed ? _value.id : (id as String?)!,
+      name: name == freezed ? _value.name : (name as String?)!,
       ingredientIds: ingredientIds == freezed
           ? _value.ingredientIds
-          : ingredientIds as List<String>,
+          : (ingredientIds as List<String>?)!,
     ));
   }
 }
@@ -107,7 +107,7 @@ class __$RecipeCopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
 /// @nodoc
 class _$_Recipe implements _Recipe {
   const _$_Recipe(
-      {@required this.id, @required this.name, @required this.ingredientIds})
+      {required this.id, required this.name, required this.ingredientIds})
       : assert(id != null),
         assert(name != null),
         assert(ingredientIds != null);
@@ -152,9 +152,9 @@ class _$_Recipe implements _Recipe {
 
 abstract class _Recipe implements Recipe {
   const factory _Recipe(
-      {@required String id,
-      @required String name,
-      @required List<String> ingredientIds}) = _$_Recipe;
+      {required String id,
+      required String name,
+      required List<String> ingredientIds}) = _$_Recipe;
 
   @override
   String get id;

@@ -15,9 +15,9 @@ class _$IngredientTearOff {
 
 // ignore: unused_element
   _Ingredient call(
-      {@required String id,
-      @required String name,
-      @required String bigImageURL}) {
+      {required String id,
+      required String name,
+      required String bigImageURL}) {
     return _Ingredient(
       id: id,
       name: name,
@@ -45,7 +45,7 @@ abstract class $IngredientCopyWith<$Res> {
   factory $IngredientCopyWith(
           Ingredient value, $Res Function(Ingredient) then) =
       _$IngredientCopyWithImpl<$Res>;
-  $Res call({String id, String name, String bigImageURL});
+  $Res call({String? id, String? name, String? bigImageURL});
 }
 
 /// @nodoc
@@ -54,19 +54,19 @@ class _$IngredientCopyWithImpl<$Res> implements $IngredientCopyWith<$Res> {
 
   final Ingredient _value;
   // ignore: unused_field
-  final $Res Function(Ingredient) _then;
+  final $Res Function(Ingredient?) _then;
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object bigImageURL = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? bigImageURL = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed ? _value.id : id as String?,
+      name: name == freezed ? _value.name : name as String?,
       bigImageURL:
-          bigImageURL == freezed ? _value.bigImageURL : bigImageURL as String,
+          bigImageURL == freezed ? _value.bigImageURL : bigImageURL as String?,
     ));
   }
 }
@@ -77,7 +77,7 @@ abstract class _$IngredientCopyWith<$Res> implements $IngredientCopyWith<$Res> {
           _Ingredient value, $Res Function(_Ingredient) then) =
       __$IngredientCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String name, String bigImageURL});
+  $Res call({String? id, String? name, String? bigImageURL});
 }
 
 /// @nodoc
@@ -92,15 +92,15 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object bigImageURL = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? bigImageURL = freezed,
   }) {
     return _then(_Ingredient(
-      id: id == freezed ? _value.id : id as String,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed ? _value.id : (id as String?)!,
+      name: name == freezed ? _value.name : (name as String?)!,
       bigImageURL:
-          bigImageURL == freezed ? _value.bigImageURL : bigImageURL as String,
+          bigImageURL == freezed ? _value.bigImageURL : (bigImageURL as String?)!,
     ));
   }
 }
@@ -108,7 +108,7 @@ class __$IngredientCopyWithImpl<$Res> extends _$IngredientCopyWithImpl<$Res>
 /// @nodoc
 class _$_Ingredient implements _Ingredient {
   const _$_Ingredient(
-      {@required this.id, @required this.name, @required this.bigImageURL})
+      {required this.id, required this.name, required this.bigImageURL})
       : assert(id != null),
         assert(name != null),
         assert(bigImageURL != null);
@@ -153,9 +153,9 @@ class _$_Ingredient implements _Ingredient {
 
 abstract class _Ingredient implements Ingredient {
   const factory _Ingredient(
-      {@required String id,
-      @required String name,
-      @required String bigImageURL}) = _$_Ingredient;
+      {required String id,
+      required String name,
+      required String bigImageURL}) = _$_Ingredient;
 
   @override
   String get id;

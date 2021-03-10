@@ -32,25 +32,25 @@ const $AppSection = _$AppSectionTearOff();
 mixin _$AppSection {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult ingredients(),
-    @required TResult recipes(),
+    required TResult ingredients(),
+    required TResult recipes(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult ingredients(),
-    TResult recipes(),
-    @required TResult orElse(),
+    TResult ingredients()?,
+    TResult recipes()?,
+    required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult ingredients(_Ingredients value),
-    @required TResult recipes(_Recipes value),
+    required TResult ingredients(_Ingredients value),
+    required TResult recipes(_Recipes value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult ingredients(_Ingredients value),
-    TResult recipes(_Recipes value),
-    @required TResult orElse(),
+    TResult ingredients(_Ingredients value)?,
+    TResult recipes(_Recipes value)?,
+    required TResult orElse(),
   });
 }
 
@@ -114,8 +114,8 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult ingredients(),
-    @required TResult recipes(),
+    required TResult ingredients(),
+    required TResult recipes(),
   }) {
     assert(ingredients != null);
     assert(recipes != null);
@@ -125,9 +125,9 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult ingredients(),
-    TResult recipes(),
-    @required TResult orElse(),
+    TResult ingredients()?,
+    TResult recipes()?,
+    required TResult orElse(),
   }) {
     assert(orElse != null);
     if (ingredients != null) {
@@ -139,8 +139,8 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult ingredients(_Ingredients value),
-    @required TResult recipes(_Recipes value),
+    required TResult ingredients(_Ingredients value),
+    required TResult recipes(_Recipes value),
   }) {
     assert(ingredients != null);
     assert(recipes != null);
@@ -150,9 +150,9 @@ class _$_Ingredients extends _Ingredients with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult ingredients(_Ingredients value),
-    TResult recipes(_Recipes value),
-    @required TResult orElse(),
+    TResult ingredients(_Ingredients value)?,
+    TResult recipes(_Recipes value)?,
+    required TResult orElse(),
   }) {
     assert(orElse != null);
     if (ingredients != null) {
@@ -209,8 +209,8 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult ingredients(),
-    @required TResult recipes(),
+    required TResult ingredients(),
+    required TResult recipes(),
   }) {
     assert(ingredients != null);
     assert(recipes != null);
@@ -220,9 +220,9 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult ingredients(),
-    TResult recipes(),
-    @required TResult orElse(),
+    TResult ingredients()?,
+    TResult recipes()?,
+    required TResult orElse(),
   }) {
     assert(orElse != null);
     if (recipes != null) {
@@ -234,8 +234,8 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object>({
-    @required TResult ingredients(_Ingredients value),
-    @required TResult recipes(_Recipes value),
+    required TResult ingredients(_Ingredients value),
+    required TResult recipes(_Recipes value),
   }) {
     assert(ingredients != null);
     assert(recipes != null);
@@ -245,9 +245,9 @@ class _$_Recipes extends _Recipes with DiagnosticableTreeMixin {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
-    TResult ingredients(_Ingredients value),
-    TResult recipes(_Recipes value),
-    @required TResult orElse(),
+    TResult ingredients(_Ingredients value)?,
+    TResult recipes(_Recipes value)?,
+    required TResult orElse(),
   }) {
     assert(orElse != null);
     if (recipes != null) {

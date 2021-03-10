@@ -8,7 +8,7 @@ import 'package:example/routing/stack_item.dart';
 class IngredientDetail extends StatelessWidget {
   final Ingredient ingredient;
 
-  const IngredientDetail({Key key, @required this.ingredient}) : super(key: key);
+  const IngredientDetail({Key? key, required this.ingredient}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

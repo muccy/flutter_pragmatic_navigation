@@ -5,8 +5,8 @@ part 'model.freezed.dart';
 @freezed
 abstract class Ingredient with _$Ingredient {
   const factory Ingredient({
-    @required String id,
-    @required String name,
-    @required String bigImageURL,
+    required String id,
+    required String name,
+    required String bigImageURL,
   }) = _Ingredient;
 }
