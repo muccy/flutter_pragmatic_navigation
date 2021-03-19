@@ -9,7 +9,7 @@ class AppSections extends StatelessWidget {
   final appSections = [AppSection.ingredients(), AppSection.recipes()];
   final String selectedSectionId;
 
-  AppSections({Key key, @required this.selectedSectionId}) : super(key: key);
+  AppSections({Key? key, required this.selectedSectionId}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

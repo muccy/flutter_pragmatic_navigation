@@ -1,5 +1,3 @@
-// @dart=2.10
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -25,7 +23,7 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
   /// When [parseRouteInformation] examines the incoming URI, it takes an increasingly large chunk of segments to
   /// inspect. This number is the maximum size. If it's null, it means there is no limit
   /// By default it's null. This number must be greater than 0, if not null.
-  final int /*?*/ pathSegmentsChunkMaxSize;
+  final int? pathSegmentsChunkMaxSize;
   NavigationStackRouterInformationParser({this.pathSegmentsChunkStartSize = 1, this.pathSegmentsChunkMaxSize})
       : assert(pathSegmentsChunkStartSize > 0),
         assert(pathSegmentsChunkMaxSize == null || pathSegmentsChunkMaxSize > 0),
@@ -46,7 +44,7 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
 
   /// Returns path segments for given navigation [item]. If you return null, it means you want to add an empty segment.
   /// For example, if you want to convert a `foo` item with `id=1` to `foo/1`, you need to return `["foo", "1"]`.
-  List<String> /*?*/ pathSegmentsForItem(T item);
+  List<String>? pathSegmentsForItem(T item);
 
   /// Returns navigation items for incoming [routeInformation].
   /// Default implementation takes the URI and explores its segments. It begins taking the first [pathSegmentsChunkStartSize]
@@ -56,14 +54,18 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
   /// You may want to override this method if you want to provide an extra validation step to the created URI (e.g.:
   /// you want to check if succession of segments has sense or you want to prepend some implicit navigation item).
   Future<List<T>> itemsForRouteInformation(RouteInformation routeInformation) async {
-    final uri = Uri.parse(routeInformation.location);
+    if (routeInformation.location == null) {
+      return [];
+    }
+
+    final uri = Uri.parse(routeInformation.location!);
     final remainingSegments = uri.pathSegments.toList();
     final items = <T>[];
 
     while (remainingSegments.isNotEmpty) {
       var itemAdded = false;
       final maxLength = pathSegmentsChunkMaxSize != null
-          ? min(pathSegmentsChunkMaxSize, remainingSegments.length)
+          ? min(pathSegmentsChunkMaxSize!, remainingSegments.length)
           : remainingSegments.length;
       for (var size = pathSegmentsChunkStartSize; size <= maxLength; size++) {
         final segments = remainingSegments.sublist(0, size);
@@ -88,7 +90,7 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
   /// Returns navigation item for given [pathSegments]. You should return null if given [pathSegments] cannot be parsed
   /// to a meaningful item.
   /// This method could be invoked by [itemsForRouteInformation] multiple times with an increasing number of segments.
-  Future<T> /*?*/ itemForPathSegments(List<String> pathSegments);
+  Future<T?> itemForPathSegments(List<String> pathSegments);
 
   @override
   Future<NavigationStack<T>> parseRouteInformation(RouteInformation routeInformation) async {

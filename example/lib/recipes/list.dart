@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:example/routing/stack_item.dart';
 
 class Recipes extends StatelessWidget {
-  const Recipes({Key key}) : super(key: key);
+  const Recipes({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

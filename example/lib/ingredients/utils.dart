@@ -1,7 +1,6 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:collection/collection.dart' show IterableExtension;
 import 'package:example/ingredients/model.dart';
 
 extension IngredientSearch on List<Ingredient> {
-  @nullable
-  Ingredient ingredientWithId(String id) => firstWhere((element) => element.id == id, orElse: () => null);
+  Ingredient? ingredientWithId(String id) => firstWhereOrNull((element) => element.id == id);
 }

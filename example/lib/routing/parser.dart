@@ -1,6 +1,5 @@
 import 'package:example/app_sections/model.dart';
 import 'package:example/routing/stack_item.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pragmatic_navigation/pragmatic_navigation.dart';
 
@@ -8,16 +7,16 @@ class MainRouterInformationParser extends NavigationStackRouterInformationParser
   final bool Function(String id) isValidIngredientId;
   final bool Function(String id) isValidRecipeId;
 
-  MainRouterInformationParser({@required this.isValidIngredientId, @required this.isValidRecipeId})
+  MainRouterInformationParser({required this.isValidIngredientId, required this.isValidRecipeId})
       : super(pathSegmentsChunkStartSize: 2, pathSegmentsChunkMaxSize: 2);
 
   @override
-  Future<NavigationStackItem> itemForPathSegments(List<String> pathSegments) async {
+  Future<NavigationStackItem?> itemForPathSegments(List<String> pathSegments) async {
     try {
       final key = pathSegments[0];
       final value = pathSegments[1];
 
-      NavigationStackItem item;
+      NavigationStackItem? item;
       switch (key) {
         case _Keys.appSection:
           if (AppSection.validIds.contains(value)) {
@@ -51,7 +50,7 @@ class MainRouterInformationParser extends NavigationStackRouterInformationParser
 
   @override
   Future<List<NavigationStackItem>> itemsForRouteInformation(RouteInformation routeInformation) async {
-    final items = await super.itemsForRouteInformation(routeInformation);
+    final List<NavigationStackItem> items = await super.itemsForRouteInformation(routeInformation);
 
     if (items.isEmpty || items.first is! NavigationStackItemAppSection) {
       final fallback = NavigationStackItem.appSection(id: AppSection.ingredients().id);

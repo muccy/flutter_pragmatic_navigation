@@ -12,10 +12,10 @@ import 'package:flutter/material.dart';
 import 'package:pragmatic_navigation/pragmatic_navigation.dart';
 
 class MainRouterDelegate extends NavigationStackRouterDelegate<NavigationStackItem> {
-  MainRouterDelegate({@required NavigationStack<NavigationStackItem> stack}) : super(stack: stack);
+  MainRouterDelegate({required NavigationStack<NavigationStackItem> stack}) : super(stack: stack);
 
   @override
-  List<Page> pages({BuildContext context}) => stack
+  List<Page> pages({BuildContext? context}) => stack
       .mapItems((item, index) => item.when(
             notFound: (pathSegments) => MaterialPage(child: NotFound()),
             appSection: (id) => MaterialPage(
@@ -23,17 +23,17 @@ class MainRouterDelegate extends NavigationStackRouterDelegate<NavigationStackIt
               child: AppSections(selectedSectionId: id),
             ),
             ingredient: (id) {
-              final ingredient = id == null ? null : allIngredients.ingredientWithId(id);
+              final ingredient = allIngredients.ingredientWithId(id);
               return MaterialPage(
                 key: ValueKey("IngredientDetail_$index"),
-                child: IngredientDetail(ingredient: ingredient),
+                child: ingredient != null ? IngredientDetail(ingredient: ingredient) : NotFound(),
               );
             },
             recipe: (id) {
-              final recipe = id == null ? null : allRecipes.recipeWithId(id);
+              final recipe = allRecipes.recipeWithId(id);
               return MaterialPage(
                 key: ValueKey("RecipeDetail_$index"),
-                child: RecipeDetail(recipe: recipe),
+                child: recipe != null ? RecipeDetail(recipe: recipe) : NotFound(),
               );
             },
           ))

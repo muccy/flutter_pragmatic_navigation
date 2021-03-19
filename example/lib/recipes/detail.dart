@@ -6,7 +6,7 @@ import 'package:example/routing/stack_item.dart';
 
 class RecipeDetail extends StatelessWidget {
   final Recipe recipe;
-  const RecipeDetail({Key key, @required this.recipe}) : super(key: key);
+  const RecipeDetail({Key? key, required this.recipe}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
