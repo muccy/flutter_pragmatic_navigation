@@ -1,3 +1,7 @@
+## [0.1.1] - 2021/05/18
+
+Fixing a bug in `NavigationStackRouterInformationParser.itemsForRouteInformation`
+
 ## [0.1.0] - 2021/03/19
 
 Sound null-safety
