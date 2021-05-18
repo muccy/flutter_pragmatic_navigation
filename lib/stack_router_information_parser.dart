@@ -67,7 +67,7 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
       final maxLength = pathSegmentsChunkMaxSize != null
           ? min(pathSegmentsChunkMaxSize!, remainingSegments.length)
           : remainingSegments.length;
-      for (var size = pathSegmentsChunkStartSize; size <= maxLength; size++) {
+      for (var size = pathSegmentsChunkStartSize; size <= maxLength && !itemAdded; size++) {
         final segments = remainingSegments.sublist(0, size);
         final item = await itemForPathSegments(segments);
         if (item != null) {
