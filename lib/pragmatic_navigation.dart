@@ -1,5 +1,5 @@
 library pragmatic_navigation;
 
-export 'stack.dart';
-export 'stack_router_delegate.dart';
-export 'stack_router_information_parser.dart';
+export 'src/stack.dart';
+export 'src/stack_router_delegate.dart';
+export 'src/stack_router_information_parser.dart';

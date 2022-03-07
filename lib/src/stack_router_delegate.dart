@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'stack.dart';
+import 'package:pragmatic_navigation/src/stack.dart';
 
 /// A convenience abstract [RouterDelegate] set to observe a given [NavigationStack] instance.
 /// Basically, you only need to override the [pages] method and to use a [RouterInformationParser] that outputs and
@@ -8,6 +8,9 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<NavigationStack<T>> {
   /// The managed navigation stack
   final NavigationStack<T> stack;
+
+  /// Observers of embedded [Navigator]
+  final List<NavigatorObserver> navigatorObservers;
 
   /// Converts the [stack] items to [Page] instances to be used while building the actual [Navigator]
   List<Page> pages({required BuildContext context});
@@ -18,7 +21,10 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
     super.dispose();
   }
 
-  NavigationStackRouterDelegate({required this.stack}) : super() {
+  NavigationStackRouterDelegate({
+    required this.stack,
+    this.navigatorObservers = const [],
+  }) : super() {
     stack.addListener(notifyListeners);
   }
 
@@ -37,6 +43,7 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
         stack.pop();
         return true;
       },
+      observers: navigatorObservers,
     );
   }
 

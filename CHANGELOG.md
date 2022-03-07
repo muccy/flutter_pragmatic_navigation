@@ -1,3 +1,8 @@
+## [0.1.2] - 2022/03/07
+
+* Exposing navigator observers
+* Adding operations on stack
+
 ## [0.1.1] - 2021/05/18
 
 Fixing a bug in `NavigationStackRouterInformationParser.itemsForRouteInformation`

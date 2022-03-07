@@ -1,6 +1,5 @@
-import 'dart:collection';
-
 import 'package:flutter/foundation.dart';
+import 'package:collection/collection.dart';
 
 /// Data structure that represents the navigation stack. It notifies changes made to [items] list, even through [push]
 /// and [pop] operations.
@@ -41,4 +40,15 @@ class NavigationStack<T> with ChangeNotifier {
     var i = 0;
     return items.map((e) => f(e, i++));
   }
+
+  /// Pops stack before first item of type [T]
+  void popBeforeItemOfType<T>() => items = items.takeWhile((value) => value is! T).toList();
+
+  /// Pops stack until first item of type [T]
+  void popUntilItemOfType<T>() {
+    final index = items.indexWhere((element) => element is T);
+    items = items.sublist(0, index + 1);
+  }
+
+  bool isLastItemOfType<T>() => items.lastOrNull is T;
 }

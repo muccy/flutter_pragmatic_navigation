@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:pragmatic_navigation/stack.dart';
+import 'package:pragmatic_navigation/src/stack.dart';
 
 /// Base class to build a URL parser from and to the [NavigationStack].
 /// The only unimplemented methods are:
