@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'stack.dart';
+import 'package:pragmatic_navigation/src/stack.dart';
 
 /// A convenience abstract [RouterDelegate] set to observe a given [NavigationStack] instance.
 /// Basically, you only need to override the [pages] method and to use a [RouterInformationParser] that outputs and
