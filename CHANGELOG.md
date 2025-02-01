@@ -1,4 +1,4 @@
-## [1.2.0] - 2022/03/07
+## [1.2.0] - 2025/02/01
 
 Adaptation for [Navigator's page APIs breaking change](https://docs.flutter.dev/release/breaking-changes/navigator-and-page-api)
 
