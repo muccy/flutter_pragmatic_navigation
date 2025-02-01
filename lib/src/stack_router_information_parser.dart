@@ -54,11 +54,7 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
   /// You may want to override this method if you want to provide an extra validation step to the created URI (e.g.:
   /// you want to check if succession of segments has sense or you want to prepend some implicit navigation item).
   Future<List<T>> itemsForRouteInformation(RouteInformation routeInformation) async {
-    if (routeInformation.location == null) {
-      return [];
-    }
-
-    final uri = Uri.parse(routeInformation.location!);
+    final uri = routeInformation.uri;
     final remainingSegments = uri.pathSegments.toList();
     final items = <T>[];
 
@@ -100,5 +96,5 @@ abstract class NavigationStackRouterInformationParser<T> extends RouteInformatio
 
   @override
   RouteInformation restoreRouteInformation(NavigationStack<T> configuration) =>
-      RouteInformation(location: uriForConfiguration(configuration).path);
+      RouteInformation(uri: uriForConfiguration(configuration));
 }

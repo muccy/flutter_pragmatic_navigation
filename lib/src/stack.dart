@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:collection/collection.dart';
+import 'package:flutter/foundation.dart';
 
 /// Data structure that represents the navigation stack. It notifies changes made to [items] list, even through [push]
 /// and [pop] operations.
@@ -32,6 +32,18 @@ class NavigationStack<T> with ChangeNotifier {
     } catch (e) {
       return null;
     }
+  }
+
+  /// Removes the given [item] from the stack and notifies change.
+  /// It returns true if item was found and removed, or false if it was not found.
+  bool remove(T item) {
+    final index = _items.indexOf(item);
+    if (index == -1) {
+      return false;
+    }
+    _items.removeAt(index);
+    notifyListeners();
+    return true;
   }
 
   /// A convenience method to map [items] with indexes.

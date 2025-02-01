@@ -1,7 +1,11 @@
+## [1.2.0] - 2022/03/07
+
+Adaptation for [Navigator's page APIs breaking change](https://docs.flutter.dev/release/breaking-changes/navigator-and-page-api)
+
 ## [0.1.2] - 2022/03/07
 
-* Exposing navigator observers
-* Adding operations on stack
+- Exposing navigator observers
+- Adding operations on stack
 
 ## [0.1.1] - 2021/05/18
 
@@ -19,6 +23,6 @@ Removing `dart pub` warnings
 
 First release including stack navigation classes:
 
-* `NavigationStackRouterDelegate`
-* `NavigationStack`
-* `NavigationStackRouterInformationParser`
+- `NavigationStackRouterDelegate`
+- `NavigationStack`
+- `NavigationStackRouterInformationParser`

@@ -15,6 +15,9 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
   /// Converts the [stack] items to [Page] instances to be used while building the actual [Navigator]
   List<Page> pages({required BuildContext context});
 
+  /// Converts the given [page] to a stack item when [onDidRemovePage()] is called
+  T? stackItemForRemovedPage(Page page);
+
   @override
   void dispose() {
     stack.removeListener(notifyListeners);
@@ -36,12 +39,11 @@ abstract class NavigationStackRouterDelegate<T> extends RouterDelegate<Navigatio
     return Navigator(
       key: navigatorKey,
       pages: pages(context: context),
-      onPopPage: (route, result) {
-        if (!route.didPop(result)) {
-          return false;
+      onDidRemovePage: (page) {
+        final item = stackItemForRemovedPage(page);
+        if (item != null) {
+          stack.remove(item);
         }
-        stack.pop();
-        return true;
       },
       observers: navigatorObservers,
     );
